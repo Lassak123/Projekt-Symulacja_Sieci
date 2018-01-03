@@ -1,4 +1,6 @@
-#pragma once
+#ifndef IPACKAGEDEPOT_H
+#define IPACKAGEDEPOT_H
+
 #include "Types.h"
 
 class IPackageDepot
@@ -12,3 +14,5 @@ public:
 private:
 
 };
+
+#endif // !IPACKAGEDEPOT_H

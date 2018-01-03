@@ -1,0 +1,11 @@
+﻿  stdafx.cpp
+  SymulacjaSieci.cpp
+  Storehouse.cpp
+c:\users\kuba6_000\desktop\studia\informatyka\projekt-symulacja_sieci\symulacjasieci\symulacjasieci\storehouse.cpp(11): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  ReceiverPreferences.cpp
+c:\users\kuba6_000\desktop\studia\informatyka\projekt-symulacja_sieci\symulacjasieci\symulacjasieci\receiverpreferences.cpp(46): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  Ramp.cpp
+c:\users\kuba6_000\desktop\studia\informatyka\projekt-symulacja_sieci\symulacjasieci\symulacjasieci\ramp.cpp(14): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  PackageSender.cpp
+c:\users\kuba6_000\desktop\studia\informatyka\projekt-symulacja_sieci\symulacjasieci\symulacjasieci\packagesender.cpp(22): fatal error C1010: Nieoczekiwany koniec pliku podczas wyszukiwania prekompilowanego nagłówka. Czy zapomniano dodać "#include "stdafx.h"" do twojego źródła?
+  Generowanie kodu...

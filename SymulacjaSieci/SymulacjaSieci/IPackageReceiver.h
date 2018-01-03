@@ -1,5 +1,8 @@
-#pragma once
+#ifndef IPACKAGERECEIVER_H
+#define IPACKAGERECEIVER_H
+
 #include "Types.h"
+
 class IPackageReceiver
 {
 public:
@@ -10,4 +13,6 @@ public:
 private:
 
 };
+
+#endif // !IPACKAGERECEIVER_H
 

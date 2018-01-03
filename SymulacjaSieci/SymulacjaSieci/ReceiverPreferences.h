@@ -1,13 +1,16 @@
-#pragma once
-#include "Types.h"
+#ifndef RECEIVERPREFERENCE_H
+#define RECEIVERPREFERENCE_H
+
 #include <map>
-#include "IPackageReceiver.h"
 #include <utility>
+#include "Types.h"
+#include "IPackageReceiver.h"
+
 class ReceiverPreferences
 {
 public:
-	
-	std::map<IPackageReceiver*, double> getProbabilities();
+
+	inline std::map<IPackageReceiver*, double> getProbabilities() { return probabilities; }
 	void setProbabilites(std::map < IPackageReceiver*, double>);
 	void addReceiver(IPackageReceiver*);
 	void addReceiverWithProbability(IPackageReceiver*, double);
@@ -18,3 +21,5 @@ private:
 	std::map<IPackageReceiver*, double> probabilities;
 
 };
+
+#endif // !RECEIVERPREFERENCE_H

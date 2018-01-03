@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TYPES_H
+#define TYPES_H
+
 #define Time int
 #define TimeOffset int
 #define ElementID int
@@ -23,14 +25,15 @@ public:
 private:
 	ElementID id;
 	static ElementID packageCounter;
-
 };
 
 ElementID Package::packageCounter = 0;
-
 
 Package::Package()
 {
 	packageCounter++;
 	id = packageCounter;
 }
+
+#endif // !TYPES_H
+
