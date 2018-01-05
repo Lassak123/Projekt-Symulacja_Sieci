@@ -7,9 +7,9 @@ class IPackageReceiver
 {
 public:
 	virtual void receivePackage(Package);
-	virtual Package* viewDepot();
-	virtual ReciverType getReceiverType();
-	virtual ElementID getId();
+	virtual Package* viewDepot() const;
+	virtual ReciverType getReceiverType() const;
+	virtual ElementID getId() const;
 private:
 
 };

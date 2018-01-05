@@ -7,9 +7,9 @@ class IPackageDepot
 {
 public:
 	virtual void push(Package);
-	virtual bool empty();
-	virtual int size();
-	virtual Package* view();
+	virtual bool empty() const;
+	virtual int size() const;
+	virtual Package* view()const;
 
 private:
 

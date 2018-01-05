@@ -21,7 +21,7 @@ class Package
 {
 public:
 	Package();
-	inline ElementID getId() { return id; }
+	inline ElementID getId() const { return id; }
 private:
 	ElementID id;
 	static ElementID packageCounter;

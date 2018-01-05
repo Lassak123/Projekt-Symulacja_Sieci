@@ -1,6 +1,6 @@
 #include "Ramp.h"
 
-Ramp::Ramp(ElementID ID, TimeOffset time)
+Ramp::Ramp(ElementID ID=0, TimeOffset time=1)
 {
 	id = ID;
 	deliveryInterval = time;
@@ -8,6 +8,9 @@ Ramp::Ramp(ElementID ID, TimeOffset time)
 
 void Ramp::deliveryGoods(Time time)
 {
-	Package package;
-	sendingBuffer.push_back(package);
+	if (time == deliveryInterval)
+	{
+		Package package;
+		sendingBuffer.push_back(package);
+	}
 }

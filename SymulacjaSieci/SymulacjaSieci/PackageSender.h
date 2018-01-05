@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PACKAGESENDER_H
+#define PACKAGESENDER_H
+
 #include "ReceiverPreferences.h"
 #include "Types.h"
 #include <vector>
@@ -6,15 +8,16 @@
 class PackageSender
 {
 public:
-	PackageSender();
-	~PackageSender();
-	ReceiverPreferences getReceiverPreferences();
+	inline ReceiverPreferences getReceiverPreferences()const { return receiverPreferences; }
 	void setReceiverPreference(ReceiverPreferences);
 	void sendPackage();
-	std::vector<Package> getSendingBuffer();
+	std::vector<Package> getSendingBuffer() const { return sendingBuffer; }
 
 
 protected:
 	ReceiverPreferences receiverPreferences;
 	std::vector<Package> sendingBuffer;
 };
+
+#endif // !PACKAGESENDER_H
+

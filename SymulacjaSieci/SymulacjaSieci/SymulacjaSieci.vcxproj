@@ -162,6 +162,7 @@
     <ClInclude Include="Worker.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="PackageQueue.cpp" />
     <ClCompile Include="PackageSender.cpp" />
     <ClCompile Include="Ramp.cpp" />
     <ClCompile Include="ReceiverPreferences.cpp" />

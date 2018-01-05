@@ -37,7 +37,7 @@ void ReceiverPreferences::removeReceiver(IPackageReceiver* deletedReceiver)
 	}
 }
 
-std::pair<IPackageReceiver*, double>* ReceiverPreferences::view()
+std::pair<IPackageReceiver*, double>* ReceiverPreferences::view() const
 {
 	auto* result = new std::pair<IPackageReceiver*, double>[probabilities.size];
 	int i = 0;
@@ -50,7 +50,7 @@ std::pair<IPackageReceiver*, double>* ReceiverPreferences::view()
 	return result;
 }
 
-IPackageReceiver* ReceiverPreferences::drawReceiver()
+IPackageReceiver* ReceiverPreferences::drawReceiver() const
 {
 	srand(time(NULL));
 	double x = (rand() % 10000) / 10000.0;
