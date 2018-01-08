@@ -8,4 +8,4 @@ class IntervalReportNotifier{
         bool shouldGenerateReport(Time);
   private:
         TimeOffset interval;  
-}
+};
