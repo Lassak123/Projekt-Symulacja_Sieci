@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef INTERVALREPORTNOTIFIER_H
 #define INTERVALREPORTNOTIFIER_H
 
@@ -14,3 +15,16 @@ private:
 };
 
 #endif 
+=======
+#include "Types.h"
+
+
+class IntervalReportNotifier{
+
+  public:
+        IntervalReportNotifier(TimeOffset);
+        bool shouldGenerateReport(Time);
+  private:
+        TimeOffset interval;  
+};
+>>>>>>> f27b00d07c8376d8d711637f90bb47ffe22f34d1
