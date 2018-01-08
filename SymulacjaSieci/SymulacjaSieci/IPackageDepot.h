@@ -6,10 +6,10 @@
 class IPackageDepot
 {
 public:
-	virtual void push(Package);
-	virtual bool empty() const;
-	virtual int size() const;
-	virtual Package* view()const;
+	virtual void push(Package)=0;
+	virtual bool empty() const =0;
+	virtual int size() const =0 ;
+	virtual Package* view()const =0;
 
 private:
 

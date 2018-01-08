@@ -10,12 +10,12 @@ class PackageQueue : public IPackageQueue
 {
 public:
 	PackageQueue(QueueType);
-	void push(Package);
-	Package pop();
-	Package* view()const;
-	QueueType getQueueType()const { return _queueType; }
-	bool isEmpty() const;
-	int size() const;
+	void push(Package) override;
+	Package pop() override;
+	Package* view()const override;
+	QueueType getQueueType()const override { return _queueType; }
+	bool empty() const override;
+	int size() const override;
 
 private:
 	QueueType _queueType;

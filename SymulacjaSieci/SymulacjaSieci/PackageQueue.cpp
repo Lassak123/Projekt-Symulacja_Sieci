@@ -1,5 +1,27 @@
 #include "PackageQueue.h"
 
+PackageQueue::PackageQueue(QueueType queuetype)
+{
+	if (queuetype == QueueType::FIFO)
+	{
+		_popFunction = [this]()->Package
+		{
+			Package result = _dequeue.front();
+			_dequeue.pop_front();
+			return result;
+		};
+	}
+	else if (queuetype == QueueType::LIFO)
+	{
+		_popFunction = [this]()->Package
+		{
+			Package result = _dequeue.back();
+			_dequeue.pop_front();
+			return result;
+		};
+	}
+}
+
 void PackageQueue::push(Package package)
 {
 	_dequeue.push_back(package);
@@ -20,7 +42,7 @@ Package* PackageQueue::view()const
 	return result;
 }
 
-bool PackageQueue::isEmpty() const
+bool PackageQueue::empty() const
 {
 	return _dequeue.empty();
 }

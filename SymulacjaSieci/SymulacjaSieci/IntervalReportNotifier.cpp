@@ -1,5 +1,10 @@
 #include "IntervalReportNotifier.h"
 
-IntervalReportNotifier(TimeOffset _interval){
-interval=_interval;
+IntervalReportNotifier::IntervalReportNotifier(TimeOffset _interval) {
+	interval = _interval;
+}
+
+bool IntervalReportNotifier::shouldGenerateReport(Time time) const
+{
+	return (time%interval == 0);
 }

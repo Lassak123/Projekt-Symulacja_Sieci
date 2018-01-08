@@ -1,7 +1,9 @@
-#pragma once
+#ifndef RAMP_H
+#define RAMP_H
+
 #include "PackageSender.h"
 
-class Ramp:public PackageSender
+class Ramp :public PackageSender
 {
 public:
 	Ramp(ElementID, TimeOffset);
@@ -13,3 +15,5 @@ private:
 	ElementID id;
 	TimeOffset deliveryInterval;
 };
+
+#endif // !RAMP_H

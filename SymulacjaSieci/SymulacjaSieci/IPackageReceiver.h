@@ -6,10 +6,10 @@
 class IPackageReceiver
 {
 public:
-	virtual void receivePackage(Package);
-	virtual Package* viewDepot() const;
-	virtual ReciverType getReceiverType() const;
-	virtual ElementID getId() const;
+	virtual void receivePackage(Package) = 0;
+	virtual Package* viewDepot() const = 0;
+	virtual ReciverType getReceiverType() const = 0;
+	virtual ElementID getId() const = 0;
 private:
 
 };

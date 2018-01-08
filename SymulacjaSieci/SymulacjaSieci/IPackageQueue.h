@@ -6,12 +6,12 @@
 class IPackageQueue : public IPackageDepot
 {
 public:
-	virtual void push(Package);
-	virtual Package pop();
-	virtual bool empty() const;
-	virtual int size() const;
-	virtual Package* view() const;
-	virtual QueueType getQueueType() const;
+	virtual void push(Package) = 0;
+	virtual Package pop() = 0;
+	virtual bool empty() const = 0;
+	virtual int size() const = 0;
+	virtual Package* view() const = 0;
+	virtual QueueType getQueueType() const = 0;
 private:
 
 };

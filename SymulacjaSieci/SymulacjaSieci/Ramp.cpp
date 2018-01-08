@@ -1,6 +1,6 @@
 #include "Ramp.h"
 
-Ramp::Ramp(ElementID ID=0, TimeOffset time=1)
+Ramp::Ramp(ElementID ID, TimeOffset time)
 {
 	id = ID;
 	deliveryInterval = time;

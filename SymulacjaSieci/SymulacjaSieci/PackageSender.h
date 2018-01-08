@@ -11,7 +11,7 @@ public:
 	inline ReceiverPreferences getReceiverPreferences()const { return receiverPreferences; }
 	void setReceiverPreference(ReceiverPreferences);
 	void sendPackage();
-	std::vector<Package> getSendingBuffer() const { return sendingBuffer; }
+	inline std::vector<Package> getSendingBuffer() const { return sendingBuffer; }
 
 
 protected:
