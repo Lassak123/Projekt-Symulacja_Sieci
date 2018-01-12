@@ -2,19 +2,16 @@
 #define STOREGOUSE_H
 
 #include "IPackageReceiver.h"
-#include "IPackageDepot.h"
-#include "IPackageQueue.h"
 #include "PackageQueue.h"
+#include <memory>
 
 class Storehouse : public IPackageReceiver
 {
 public:
 	Storehouse(ElementID);
-	~Storehouse();
-	void receivePackage(Package);
-	Package* viewDepot() const;
+	
+	void receivePackage(Package)override;
 	inline ElementID getId() const override { return id; }
-
 	void receivePackage(Package) override;
 	Package* viewDepot() const override;
 	inline ReciverType getReceiverType() const override { return ReciverType::STORAGEHOUSE; }
@@ -22,7 +19,7 @@ public:
 
 private:
 	ElementID id;
-	IPackageDepot* depot;
+	std::unique_ptr<IPackageDepot> depot;
 };
 
 #endif // !STOREGOUSE_H

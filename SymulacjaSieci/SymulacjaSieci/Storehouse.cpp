@@ -2,13 +2,9 @@
 
 Storehouse::Storehouse(ElementID ID) : id(ID)
 {
-	depot = new PackageQueue(QueueType::FIFO);
+	depot = std::make_unique<PackageQueue>();
 }
 
-Storehouse::~Storehouse()
-{
-	delete depot;
-}
 
 void Storehouse::receivePackage(Package package)
 {

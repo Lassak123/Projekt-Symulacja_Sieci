@@ -2,7 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 
-void ReceiverPreferences::setProbabilites(std::map<IPackageReceiver*, double> newProbability)
+void ReceiverPreferences::setPreferences(std::map<IPackageReceiver*, double> newProbability)
 {
 	probabilities = newProbability;
 
@@ -50,15 +50,13 @@ std::pair<IPackageReceiver*, double>* ReceiverPreferences::view() const
 	return result;
 }
 
-IPackageReceiver* ReceiverPreferences::drawReceiver() const
+IPackageReceiver* ReceiverPreferences::drawReceiver(double porbability) const
 {
-	srand(time(NULL));
-	double x = (rand() % 10000) / 10000.0;
 	double help = 0;
 	for (auto& prob : probabilities)
 	{
 		help += prob.second;
-		if (x<help)
+		if (porbability<help)
 		{
 			return prob.first;
 		}

@@ -13,13 +13,13 @@ public:
 	void push(Package) override;
 	Package pop() override;
 	Package* view()const override;
-	QueueType getQueueType()const override { return _queueType; }
+	inline QueueType getQueueType()const override { return _queueType; }
 	bool empty() const override;
 	int size() const override;
-
+	
 private:
 	QueueType _queueType;
-	std::deque<Package> _dequeue;
+	std::deque<Package> _deque;
 	std::function<Package()> _popFunction;
 };
 
