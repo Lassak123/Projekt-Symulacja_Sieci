@@ -179,6 +179,7 @@
     </ClCompile>
     <ClCompile Include="Storehouse.cpp" />
     <ClCompile Include="SymulacjaSieci.cpp" />
+    <ClCompile Include="Worker.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

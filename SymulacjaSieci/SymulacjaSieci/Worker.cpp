@@ -1,23 +1,23 @@
-#include"Types.h"
 #include"Worker.h"
-#include<iostream>
-Worker::Worker(ElementID _id, TimeOffset _to, IPackageQueue* IPQ)
-{
-	id = _id;
-	processingDuration = _to;
-	packageProcessingStartTime = 0;
-	queue = IPQ;
-}
-void Worker::receivePackage(Package _package)
-{
-	queue->push(_package);
-}
-Package* Worker::viewDepot()
-{
-	return queue;//????????
-}
-void Worker::doWork();
-{
 
+Worker::Worker(ElementID _id, TimeOffset _time, IPackageQueue* _packagequeue)
+	:id(_id), processingDuration(_time)
+{}
+
+void Worker::receivePackage(Package package)
+{
+	queue->push(package);
 }
-//ReciverType getReceiveType(); czy aby 
+Package * Worker::viewDepot() const
+{
+	return queue->view();
+}
+
+void Worker::doWork()
+{
+	
+}
+
+
+
+
