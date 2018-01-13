@@ -21,6 +21,10 @@ public:
 	void addStorehouse(Storehouse);
 	void removeStorehouse(ElementID);
 
+	std::list<Ramp> getRampsL() { return ramps; }
+	std::list<Worker> getRWorkerL() { return workers; }
+	std::list<Storehouse> getStorehouseL() { return storehouses; }
+
 	bool isConsistent();
 
 

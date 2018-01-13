@@ -1,4 +1,5 @@
 #include "Factory.h"
+#include <array>
 
 template<class T>
 T* getT(std::list<T> list)
@@ -99,3 +100,33 @@ void Factory::removeStorehouse(ElementID id)
 		return (lambdaSth.getId() == id);
 	});
 }
+
+
+
+bool Factory::isConsistent()
+{
+	int n = workers.size();
+	int* ok = new int[n];
+	for (int i=0;i<n;i++)
+	{
+		ok[i] = 0;
+	}
+	int newi = 0, oldi = 0;
+	bool change = true;
+	for (auto& work:workers)
+	{
+		auto* pref= work.receiverPreferences.view();
+		for (int i = 0; i < work.receiverPreferences.getPreferences().size(); i++)
+		{
+			if (pref[i].first->getReceiverType == ReciverType::STORAGEHOUSE)
+				ok[i] = 1;
+		}
+
+	}
+	while (change)
+	{
+		
+	}
+
+}
+
