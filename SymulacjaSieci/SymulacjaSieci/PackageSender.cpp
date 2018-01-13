@@ -2,11 +2,6 @@
 #include <cstdlib>
 #include <ctime>
 
-void PackageSender::setReceiverPreference(ReceiverPreferences newPreferences)
-{
-	receiverPreferences = newPreferences;
-}
-
 void PackageSender::sendPackage()
 {
 	std::srand(std::time(nullptr));

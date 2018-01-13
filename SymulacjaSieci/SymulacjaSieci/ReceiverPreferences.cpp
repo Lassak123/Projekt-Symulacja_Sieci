@@ -29,12 +29,18 @@ void ReceiverPreferences::addReceiverWithProbability(IPackageReceiver* newreceiv
 
 void ReceiverPreferences::removeReceiver(IPackageReceiver* deletedReceiver)
 {
-	auto deletedprob = probabilities[deletedReceiver];
-	probabilities.erase(deletedReceiver);
-	for (auto & prob : probabilities)
+	auto x = probabilities.find(deletedReceiver);
+	if (x != probabilities.end())
 	{
-		prob.second /= (1 - deletedprob);
+		auto deletedprob = probabilities[deletedReceiver];
+		probabilities.erase(deletedReceiver);
+
+		for (auto & prob : probabilities)
+		{
+			prob.second /= (1 - deletedprob);
+		}
 	}
+	
 }
 
 std::pair<IPackageReceiver*, double>* ReceiverPreferences::view() const

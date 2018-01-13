@@ -1,5 +1,7 @@
-#pragma once
-#include <vector>
+#ifndef FACTORY_H
+#define FACTORY_H
+
+#include <list>
 #include "Ramp.h"
 #include "Worker.h"
 #include "Storehouse.h"
@@ -20,10 +22,12 @@ public:
 	void removeStorehouse(ElementID);
 
 	bool isConsistent();
-	
+
 
 private:
-	std::vector<Ramp> ramps;
-	std::vector<Worker> workers;
-	std::vector<Storehouse> storehouses;
+	std::list<Ramp> ramps;
+	std::list<Worker> workers;
+	std::list<Storehouse> storehouses;
 };
+
+#endif // !FACTORY_H

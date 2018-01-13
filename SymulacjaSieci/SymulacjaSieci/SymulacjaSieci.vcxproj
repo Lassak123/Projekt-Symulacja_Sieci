@@ -165,6 +165,7 @@
     <ClInclude Include="Worker.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="IntervalReportNotifier.cpp" />
     <ClCompile Include="PackageQueue.cpp" />
     <ClCompile Include="PackageSender.cpp" />

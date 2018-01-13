@@ -11,7 +11,7 @@
 class Worker :public PackageSender, public IPackageReceiver
 {
 public:
-	Worker(ElementID, TimeOffset, IPackageQueue*);
+	Worker(ElementID, TimeOffset, std::unique_ptr<IPackageQueue>);
 	void receivePackage(Package) override;
 	Package* viewDepot() const override;
 	void doWork();
@@ -25,7 +25,7 @@ public:
 private:
 	ElementID id;
 	TimeOffset processingDuration;
-	Time packageProcessingStartTime;
+	Time packageProcessingStartTime = 0;
 	std::unique_ptr<IPackageQueue> queue;
 	std::vector<Package> currentlyProcessedPackage;
 };

@@ -8,14 +8,11 @@
 class PackageSender
 {
 public:
-	
-	void setReceiverPreference(ReceiverPreferences);
 	void sendPackage();
 	Package* viewSendingBuffer()const;
-	inline ReceiverPreferences getReceiverPreferences()const { return receiverPreferences; }
-
-protected:
 	ReceiverPreferences receiverPreferences;
+protected:
+	
 	std::vector<Package> sendingBuffer;
 };
 
